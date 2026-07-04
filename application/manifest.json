@@ -1,0 +1,14 @@
+{
+    "settings":{
+        "debug":false,
+        "port":80,
+        "host":"0.0.0.0"
+    },
+    "views":{
+        "/":"page@index.html",
+        "/api/add":"script@api.py@add"
+    },
+    "autofill":{
+        "/static/":"script@static.py@static"
+    }
+}
