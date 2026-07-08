@@ -6,9 +6,21 @@
     },
     "views":{
         "/":"page@index.html",
-        "/api/add":"script@api.py@add"
+        "/api/add":"script@api.py@add",
+        "/500":"script@t@6969"
     },
     "autofill":{
         "/static/":"script@static.py@static"
+    },
+    "prequest":{
+        "*":[
+            "script@logger.py@traffic_logger"
+        ]
+    },
+    "postquest":{
+        "*":[
+            "script@logger.py@post_traffic_logger",
+            "script@status.py@http_status_handler"
+        ]
     }
 }

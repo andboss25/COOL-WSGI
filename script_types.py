@@ -40,8 +40,6 @@ class Request:
             return {}
         else:
             return json.loads(content)
-            
-
 
 class Response:
     def __init__(self):
