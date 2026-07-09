@@ -14,11 +14,14 @@ def http_status_handler(request: Request,response: Response) -> Response:
         return r
     
     if response.status == "500 Internal Server Error":
-        r = Response()
-        r.make_html(
-            open(os.path.join(request.global_data['app_path'],"pages","500.html"),"r")
-        )
-        r.status = "500 Internal Server Error"
+        if not request.global_data['debug'] :
+            r = Response()
+            r.make_html(
+                open(os.path.join(request.global_data['app_path'],"pages","500.html"),"r")
+            )
+            r.status = "500 Internal Server Error"
+        else:
+            return response
         return r
 
     return None 

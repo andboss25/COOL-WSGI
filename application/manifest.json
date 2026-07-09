@@ -14,7 +14,8 @@
     },
     "prequest":{
         "*":[
-            "script@logger.py@traffic_logger"
+            "script@logger.py@traffic_logger",
+            "script@json.py@jsonify"
         ]
     },
     "postquest":{
