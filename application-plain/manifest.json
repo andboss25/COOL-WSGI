@@ -14,12 +14,14 @@
    },
    "prequest": {
       "*": [
-         "script@addons\\logger\\logger.py@traffic_logger"
+         "script@logger.py@traffic_logger",
+         "script@json.py@jsonify"
       ]
    },
    "postquest": {
       "*": [
-         "script@addons\\logger\\logger.py@post_traffic_logger"
+         "script@logger.py@post_traffic_logger",
+         "script@status.py@http_status_handler"
       ]
    }
 }

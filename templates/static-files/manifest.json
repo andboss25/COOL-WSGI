@@ -1,0 +1,7 @@
+{
+    "autofill":{
+        "/static/":"script@addons\\static\\static.py@static"
+    },
+    "name":"static",
+    "version":1
+}
