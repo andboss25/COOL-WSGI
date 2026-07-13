@@ -1,0 +1,9 @@
+{
+    "postquest": {
+        "*": [
+            "script@addons\\templates\\template.py@process_template"
+        ]
+    },
+    "name":"html-templates",
+    "version":1
+}

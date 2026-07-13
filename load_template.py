@@ -57,8 +57,10 @@ elif sys.argv[1] == "install":
 
     for key in manifest.keys():
         try:
-            target_manifest_data[key].extend(manifest[key])
+            for key2 in manifest[key]:
+                target_manifest_data[key][key2].extend(manifest[key][key2])
         except:
+
             target_manifest_data[key] = manifest[key]
 
     target_manifest.write(
@@ -77,3 +79,5 @@ elif sys.argv[1] == "install":
         app_location,
         dirs_exist_ok= True
     )
+
+# TODO test

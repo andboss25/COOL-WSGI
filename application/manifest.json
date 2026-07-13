@@ -19,7 +19,8 @@
    },
    "postquest": {
       "*": [
-         "script@addons\\logger\\logger.py@post_traffic_logger"
+         "script@addons\\logger\\logger.py@post_traffic_logger",
+         "script@addons\\templates\\template.py@process_template"
       ]
    }
 }

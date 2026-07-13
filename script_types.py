@@ -10,6 +10,9 @@ class Request:
         self.headers = headers
         self.quert_dict = urllib.parse.parse_qs(query_string)
         self.global_data = global_data
+        
+        if self.global_data.get("keys") == None:
+            self.global_data['keys'] = {}
     
     def fetch_content(self) -> str:
         """Fetch plain body of request and if the body is empty then it will return ''"""
@@ -40,6 +43,10 @@ class Request:
             return {}
         else:
             return json.loads(content)
+        
+    def pass_template_keys(self,keys:dict):
+        """Set keys that a template handler (if installed) may use"""
+        self.global_data['keys'] = keys
 
 class Response:
     def __init__(self):

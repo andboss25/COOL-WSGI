@@ -55,6 +55,7 @@ def compute_postquest_data(global_data,path,response):
                     resp = function(request,response)
                     if resp != None:
                         return resp
+                    
     
     return response
 
